@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Change slideshow Title -->
+		<title></title>
+
+		<!-- Change slideshow Icon  -->
+		<link rel="icon" href="./slideshow/resources/icons/icon.png" />
+
+		<link rel="stylesheet" href="../reveal.js/dist/reset.css">
+		<link rel="stylesheet" href="../reveal.js/dist/reveal.css">
+
+		<!-- Modify the href link to change theme -->
+		<link rel="stylesheet" href="./slideshow/css/theme/mine.css" id="theme">
+
+		<!-- To add CSS style, add it in slideshow/css/styles.css -->
+		<link rel="stylesheet" href="./slideshow/css/style.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../reveal.js/plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<!-- Wrap the entire slide show in a div using the "reveal" class. -->
+		<div class="reveal">
+			<!-- Wrap all slides in a single "slides" class -->
+			<div class="slides">
+	
+				<!-- TO MODIFY YOUR SLIDESHOW : -->
+				<!-- add sections to the slideshow/slideshow.html file -->
+	
+				<section data-external-replace="./slideshow/_slideshow.html"> </section>
+	
+			</div>
+		</div>
+
+		<script src="../reveal.js/dist/reveal.js"></script>
+		<script src="../reveal.js/plugin/notes/notes.js"></script>
+		<script src="../reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="../reveal.js/plugin/highlight/highlight.js"></script>
+
+		<script src="../reveal.js/plugin/external/external.js"></script>
+		<!-- <script src="../reveal.js/plugin/plantuml/plantuml.js"></script> -->
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 1000, // 1000, // 960,
+				height: 750, // 730, // 700,
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+				totalTime: 1500,
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					// Use external HTML files
+					// More info https://github.com/janschoepke/reveal_external
+					{
+						src: '../reveal.js/plugin/external/external.js',
+						condition: function () {
+							return !!document.querySelector('[data-external],[data-external-replace]');
+						}
+					},
+					// Interpret PlantUML in Markdown elements
+					// More info https://github.com/reveal-plantuml/reveal-plantuml.github.io
+					// {
+					// 	src: '../reveal.js/plugin/plantuml/plantuml.js'
+					// },
+				],
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<!-- <script src="socket.io/socket.io.js"></script>
+		<script src="node_modules/reveal-notes-server/client.js"></script> -->
+	</body>
+</html>
